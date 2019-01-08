@@ -1,3 +1,0 @@
-G:/tmp/tensorflow-master/tensorflow/contrib/lite/examples/android/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/Face.dir
-G:/tmp/tensorflow-master/tensorflow/contrib/lite/examples/android/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
-G:/tmp/tensorflow-master/tensorflow/contrib/lite/examples/android/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
