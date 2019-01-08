@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "org.tensorflow.lite.demo"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        // Remove this block.
+//        jackOptions {
+//            enabled true
+//        }
+        ndk{   //wjy add{}
+            abiFilters "armeabi-v7a" //,"arm64-v8a","armeabi"
+            stl "gnustl_static"
+        }
+        externalNativeBuild {   //wjy add{}
+            cmake {
+                arguments "-DANDROID_TOOLCHAIN=clang"
+                cFlags "-fopenmp -O2 -fvisibility=hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
+                cppFlags "-fopenmp -O2 -fvisibility=hidden -fvisibility-inlines-hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
+                cppFlags ""
+                cppFlags "-std=c++11"
+                cppFlags "-frtti"
+                cppFlags "-fexceptions"
+            }
+        }
+
+
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    aaptOptions {
+        noCompress "tflite"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets{
+        main{
+            //引入so文件     wjy
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+repositories {
+    maven {
+        url 'https://google.bintray.com/tensorflow'
+    }
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+// import DownloadModels task
+project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+project.ext.TMP_DIR   = project.buildDir.toString() + '/downloads'
+
+// Download default models; if you wish to use your own models then
+// place them in the "assets" directory and comment out this line.
+// apply from: "download-models.gradle"    wjy
+
+dependencies {
+    // compile fileTree(dir: 'libs', include: ['*.jar'])
+    // compile 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+    compile(name:'tensorflow-lite', ext:'aar')   //wjy
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+}

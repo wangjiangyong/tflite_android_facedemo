@@ -1,0 +1,47 @@
+{
+    "logs": [
+        {
+            "outputFile": "G:\\tmp\\tensorflow-master\\tensorflow\\contrib\\lite\\examples\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "G:\\tmp\\tensorflow-master\\tensorflow\\contrib\\lite\\examples\\android\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "from": {
+                        "startLines": "7",
+                        "startColumns": "2",
+                        "startOffsets": "214",
+                        "endLines": "9",
+                        "endColumns": "10",
+                        "endOffsets": "354"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "10",
+                        "endOffsets": "195"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\treeph\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a703800e4d9399699dc1d20542bf9a88\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2,7,8,9,15",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,331,402,485,895",
+                        "endLines": "6,7,8,14,20",
+                        "endColumns": "12,70,82,12,12",
+                        "endOffsets": "326,397,480,890,1312"
+                    },
+                    "to": {
+                        "startLines": "5,10,11,12,18",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "200,476,547,630,1040",
+                        "endLines": "9,10,11,17,23",
+                        "endColumns": "12,70,82,12,12",
+                        "endOffsets": "471,542,625,1035,1457"
+                    }
+                }
+            ]
+        }
+    ]
+}
