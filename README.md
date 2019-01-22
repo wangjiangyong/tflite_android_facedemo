@@ -7,8 +7,14 @@ I integrate face recognition Pre-training model [MobileFaceNet](https://github.c
 # Camera Demo
 
 ![back](https://github.com/wangjiangyong/tflite_android_facedemo/blob/master/back.jpg?raw=true)
-![register](https://github.com/wangjiangyong/tflite_android_facedemo/blob/master/register.jpg?raw=true)
 ![front](https://github.com/wangjiangyong/tflite_android_facedemo/blob/master/front.jpg?raw=true)
+
+- Touch the screen to display debug information
+- Press volume button switch front and back cameras
+- Long press the screen to pop up the registration activity
+
+![register](https://github.com/wangjiangyong/tflite_android_facedemo/blob/master/register.jpg?raw=true)
+
 
 
 
