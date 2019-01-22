@@ -4,7 +4,7 @@ This Demo is base on [TensorFlow Lite examples](https://github.com/tensorflow/te
 I integrate face recognition Pre-training model [MobileFaceNet](https://github.com/deepinsight/insightface) base on [ncnn](https://github.com/Tencent/ncnn).Thanks to [mobilefacenet_android](https://github.com/GRAYKEY/mobilefacenet_android)'s author
 
 
-
+# Camera Demo
 
 
 
